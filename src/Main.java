@@ -3,11 +3,14 @@ public class Main {
     //Задача 1
     System.out.println("Задача 1");
     int amount = 15_000;
+    int desiredSum = 2_459_000;
     int summPayments = 0;
     int month = 0 ;
-    while (summPayments < 2_459_000 ){
-        summPayments = summPayments + amount;
-        month = month+1;
+    double percent = 1D/100;
+    while (summPayments < desiredSum ){
+        summPayments +=  amount;
+        summPayments = (int) (summPayments*(1+percent));
+        month += 1;
         System.out.println("Месяц "+month+ ", сумма накоплений равна "+summPayments+" рублей");
     }
         System.out.println();
@@ -37,8 +40,8 @@ public class Main {
     //Задача 4
         System.out.println();
         System.out.println("Задача 4");
-    double percent = 7D/100;
-    int desiredSum = 12_000_000;
+        percent = 7D/100;
+     desiredSum = 12_000_000;
     int amount1 = 15_000;
     int sum = amount1;
     month=0;
